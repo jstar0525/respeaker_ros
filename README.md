@@ -57,14 +57,27 @@ A ROS Package for Respeaker Mic Array
 ## How to use
 
 1. Run executables
-
     ```bash
-    $ roslaunch respeaker_ros respeaker.launch
+    $ source /opt/ros/melodic/setup.bash
+    $ source ~/catkin_ws/devel/setup.bash
+    $ roscore
+    ```
+    ```bash
+    $ sudo su
+    $ cd /home/user/catkin_ws
+    $ source devel/setup.bash
+    $ rosrun respeaker_ros respeaker_node.py
+    ```
+    ```bash
+    $ source /opt/ros/melodic/setup.bash
+    $ source ~/catkin_ws/devel/setup.bash
     $ rostopic echo /sound_direction     # Result of DoA
     $ rostopic echo /sound_localization  # Result of DoA as Pose
     $ rostopic echo /is_speeching        # Result of VAD
     $ rostopic echo /audio               # Raw audio
     ```
+
+    ![Respeaker direction](./direction.png)
 
     You can also set various parameters via `dynamic_reconfigure`.
 
@@ -82,12 +95,6 @@ A ROS Package for Respeaker Mic Array
     a: 0.3"
     ```
 
-## Use cases
-
-### Voice Recognition
-
-- [ros_speech_recognition](https://github.com/jsk-ros-pkg/jsk_3rdparty/tree/master/ros_speech_recognition)
-- [julius_ros](http://wiki.ros.org/julius_ros)
 
 ## Notes
 
