@@ -15,13 +15,12 @@ A ROS Package for Respeaker Mic Array
 1. Install this package
 
     ```bash
-    mkdir -p ~/catkin_ws/src && ~/catkin_ws/src
+    mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
     git clone https://github.com/furushchev/respeaker_ros.git
     cd ~/catkin_ws
-    source /opt/ros/kinetic/setup.bash
+    source /opt/ros/melodic/setup.bash
     rosdep install --from-paths src -i -r -n -y
-    catkin config --init
-    catkin build respeaker_ros
+    catkin_make
     source ~/catkin_ws/devel/setup.bash
     ```
 
