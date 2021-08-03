@@ -16,7 +16,7 @@ A ROS Package for Respeaker Mic Array
 
     ```bash
     mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
-    git clone https://github.com/furushchev/respeaker_ros.git
+    git clone https://github.com/jstar0525/respeaker_ros.git
     cd ~/catkin_ws
     source /opt/ros/melodic/setup.bash
     rosdep install --from-paths src -i -r -n -y
