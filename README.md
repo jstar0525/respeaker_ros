@@ -17,9 +17,22 @@ A ROS Package for Respeaker Mic Array
     ```bash
     $ mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
     $ git clone https://github.com/jstar0525/respeaker_ros.git
+    ```
+
+1. Install python requirements
+
+    ```bash
+    $ cd ~/catkin_ws/src/respeaker_ros
+    $ sudo pip install -r requirements.txt
+    ```
+
+1. Build this package from source
+
+    ```bash
     $ cd ~/catkin_ws
     $ source /opt/ros/melodic/setup.bash
     $ rosdep install --from-paths src -i -r -n -y
+    $ sudo apt-get install ros-melodic-catkin-virtualenv
     $ catkin_make
     $ source ~/catkin_ws/devel/setup.bash
     ```
@@ -32,19 +45,12 @@ A ROS Package for Respeaker Mic Array
     Please run the command as followings to install setting file:
 
     ```bash
-    $ cd ~/catkin_ws/src/respeaker_ros
+    $ roscd respeaker_ros
     $ sudo cp -f $(rospack find respeaker_ros)/config/60-respeaker.rules /etc/udev/rules.d/60-respeaker.rules
     $ sudo systemctl restart udev
     ```
 
     And then re-connect the device.
-
-1. Install python requirements
-
-    ```bash
-    $ cd ~/catkin_ws/src/respeaker_ros
-    $ sudo pip install -r requirements.txt
-    ```
 
 1. Update firmware
 
