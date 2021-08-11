@@ -70,8 +70,8 @@ A ROS Package for Respeaker Mic Array
     ```
     ```bash
     $ sudo su
-    $ cd /home/user/catkin_ws
-    $ source devel/setup.bash
+    $ source /opt/ros/melodic/setup.bash
+    $ source /home/user/catkin_ws/devel/setup.bash
     $ rosrun respeaker_ros respeaker_node.py
     ```
     ```bash
