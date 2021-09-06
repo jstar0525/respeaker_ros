@@ -12,6 +12,44 @@ A ROS Package for Respeaker Mic Array
 
 ## Preparation
 
+1. Install reaspeaker
+    
+    Update Firmware
+    ```bash
+    $ sudo apt-get update
+    $ sudo apt-get install python-usb
+    $ sudo pip install pyusb click
+    $ cd ~
+    $ git clone https://github.com/jstar0525/usb_4_mic_array.git
+    $ cd usb_4_mic_array
+    $ sudo python dfu.py --download 6_channels_firmware.bin  # The 6 channels version 
+
+    # if you want to use 1 channel,then the command should be like:
+    $ sudo python dfu.py --download 1_channel_firmware.bin
+    ```
+
+    Tuning
+    ```bash
+    $ cd ~/usb_4_mic_array
+    $ python tuning.py -p
+    ```
+
+    DOA (Direction of Arrival)
+    ```bash
+    $ cd ~/usb_4_mic_array
+    $ sudo python doa.py 
+    ```
+
+    Extract Voice
+    ```bash
+    $ sudo apt-get install portaudio19-dev python-pyaudio
+    $ sudo pip install pyaudio
+    $ cd usb_4_mic_array
+    $ python get_indx.py
+    ```
+
+    ref : https://jstar0525.tistory.com/103
+
 1. Install this package
 
     ```bash
