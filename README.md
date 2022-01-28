@@ -45,7 +45,7 @@ A ROS Package for Respeaker Mic Array
     $ sudo apt-get install portaudio19-dev python-pyaudio
     $ sudo pip install pyaudio
     $ cd usb_4_mic_array
-    $ python get_indx.py
+    $ python get_idx.py
     ```
 
     ref : https://jstar0525.tistory.com/103
