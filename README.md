@@ -44,7 +44,7 @@ A ROS Package for Respeaker Mic Array
     ```bash
     $ sudo apt-get install portaudio19-dev python-pyaudio
     $ sudo pip install pyaudio
-    $ cd usb_4_mic_array
+    $ cd ~/usb_4_mic_array
     $ python get_idx.py
     ```
 
@@ -94,7 +94,7 @@ A ROS Package for Respeaker Mic Array
 
     ```bash
     $ git clone https://github.com/respeaker/usb_4_mic_array.git
-    $ cd usb_4_mic_array
+    $ cd ~/usb_4_mic_array
     $ sudo python dfu.py --download 6_channels_firmware.bin  # The 6 channels version 
     ```
 
@@ -107,12 +107,12 @@ A ROS Package for Respeaker Mic Array
     $ roscore
     ```
     ```bash
-    $ sudo su
     $ source /opt/ros/melodic/setup.bash
     $ source /home/user/catkin_ws/devel/setup.bash
     $ rosrun respeaker_ros respeaker_node.py
     ```
     ```bash
+    # Check Ros topic
     $ source /opt/ros/melodic/setup.bash
     $ source ~/catkin_ws/devel/setup.bash
     $ rostopic echo /sound_direction     # Result of DoA
